@@ -1,5 +1,4 @@
 import 'package:covid19_app/pages/detail/detail_screen.dart';
-import 'package:covid19_app/pages/home/components/dropdown_country.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -18,16 +17,6 @@ class Body extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // DropdownCountry(),
-          // Container(
-          //   width: double.infinity,
-          //   color: kPrimaryColor.withOpacity(0.03),
-          //   padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-          //   child: Text(
-          //     "Today",
-          //     style: Theme.of(context).textTheme.headline5,
-          //   ),
-          // ),
           Container(
             width: double.infinity,
             padding: EdgeInsets.only(top: 15, bottom: 30, left: 20, right: 20),

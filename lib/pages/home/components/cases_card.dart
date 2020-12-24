@@ -24,7 +24,7 @@ class CaeseCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Container(
-        width: SizeConfig.screenWidth * 0.429,
+        width: SizeConfig.screenWidth * 0.42,
         child: Container(
           decoration: BoxDecoration(
             color: Colors.white,

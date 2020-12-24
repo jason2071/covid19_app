@@ -4,6 +4,7 @@ import 'package:covid19_app/pages/detail/components/weekly_chart.dart';
 import 'package:covid19_app/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'dart:io' show Platform;
 
 class Body extends StatelessWidget {
   const Body({Key key}) : super(key: key);
@@ -19,7 +20,7 @@ class Body extends StatelessWidget {
             children: [
               Container(
                 width: SizeConfig.screenWidth * 0.9,
-                height: SizeConfig.screenHeight * 0.63,
+                height: SizeConfig.screenHeight * (Platform.isIOS ? 0.63 : 0.8),
                 padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -94,7 +95,8 @@ class Body extends StatelessWidget {
               SizedBox(height: 15),
               Container(
                 width: SizeConfig.screenWidth * 0.9,
-                height: SizeConfig.screenHeight * 0.25,
+                height:
+                    SizeConfig.screenHeight * (Platform.isIOS ? 0.25 : 0.33),
                 padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: Colors.white,
