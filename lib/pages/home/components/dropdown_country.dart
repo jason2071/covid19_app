@@ -85,7 +85,7 @@ class DropdownCountry extends StatelessWidget {
               Expanded(
                 child: Text(
                   'Thailand',
-                  style: TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: 18),
                 ),
               ),
               SvgPicture.asset(
