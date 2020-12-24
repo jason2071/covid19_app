@@ -18,16 +18,16 @@ class Body extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          DropdownCountry(),
-          Container(
-            width: double.infinity,
-            color: kPrimaryColor.withOpacity(0.03),
-            padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-            child: Text(
-              "Today",
-              style: Theme.of(context).textTheme.headline5,
-            ),
-          ),
+          // DropdownCountry(),
+          // Container(
+          //   width: double.infinity,
+          //   color: kPrimaryColor.withOpacity(0.03),
+          //   padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+          //   child: Text(
+          //     "Today",
+          //     style: Theme.of(context).textTheme.headline5,
+          //   ),
+          // ),
           Container(
             width: double.infinity,
             padding: EdgeInsets.only(top: 15, bottom: 30, left: 20, right: 20),
