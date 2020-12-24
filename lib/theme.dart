@@ -8,6 +8,7 @@ ThemeData theme() {
     primaryColor: kPrimaryColor,
     accentColor: kPrimaryColor,
     canvasColor: Colors.transparent,
+    scaffoldBackgroundColor: kBackgroundColor,
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }
