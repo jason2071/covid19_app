@@ -133,7 +133,7 @@ packages:
       name: fl_chart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.9.4"
+    version: "0.12.1"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -150,7 +150,7 @@ packages:
       name: flutter_svg
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.17.4"
+    version: "0.19.2+1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -436,7 +436,7 @@ packages:
       name: xml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.7.0"
+    version: "4.5.1"
   yaml:
     dependency: transitive
     description:
@@ -446,4 +446,4 @@ packages:
     version: "2.2.1"
 sdks:
   dart: ">=2.12.0-0.0 <3.0.0"
-  flutter: ">=1.6.7 <2.0.0"
+  flutter: ">=1.24.0-6.0.pre <2.0.0"
