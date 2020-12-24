@@ -69,7 +69,7 @@ class Body extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
@@ -77,7 +77,7 @@ class Body extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline5,
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -95,7 +95,7 @@ class Body extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
               height: 150,

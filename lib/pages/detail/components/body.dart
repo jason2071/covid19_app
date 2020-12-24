@@ -47,7 +47,7 @@ class Body extends StatelessWidget {
                         SvgPicture.asset("assets/icons/more.svg"),
                       ],
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 15),
                     Row(
                       children: <Widget>[
                         Text(
@@ -64,7 +64,6 @@ class Body extends StatelessWidget {
                         SvgPicture.asset("assets/icons/increase.svg")
                       ],
                     ),
-                    SizedBox(height: 20),
                     Text(
                       "From Health Center",
                       style: TextStyle(
@@ -73,9 +72,9 @@ class Body extends StatelessWidget {
                         fontSize: 16,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 15),
                     WeeklyChart(),
-                    SizedBox(height: 20),
+                    SizedBox(height: 15),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -92,7 +91,7 @@ class Body extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 15),
               Container(
                 width: SizeConfig.screenWidth * 0.9,
                 height: SizeConfig.screenHeight * 0.25,
@@ -127,7 +126,7 @@ class Body extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 15),
             ],
           ),
         ),
