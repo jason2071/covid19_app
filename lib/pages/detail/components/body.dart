@@ -40,10 +40,7 @@ class Body extends StatelessWidget {
                       children: [
                         Text(
                           "New Cases",
-                          style: Theme.of(context).textTheme.headline6.copyWith(
-                                color: kTextColor,
-                                fontSize: 18,
-                              ),
+                          style: TextStyle(fontSize: 16),
                         ),
                         SvgPicture.asset("assets/icons/more.svg"),
                       ],
@@ -117,7 +114,7 @@ class Body extends StatelessWidget {
                         Text(
                           "Global Map",
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 16,
                           ),
                         ),
                         SvgPicture.asset("assets/icons/more.svg")
