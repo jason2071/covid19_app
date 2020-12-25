@@ -14,8 +14,7 @@ class CaeseCard extends StatelessWidget {
     this.press,
   }) : super(key: key);
 
-  final String title;
-  final int effectedNum;
+  final String title, effectedNum;
   final Color iconColor;
   final Function press;
 

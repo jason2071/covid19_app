@@ -1,15 +1,50 @@
+import 'package:covid19_app/models/api_response.dart';
+import 'package:covid19_app/models/today_model.dart';
 import 'package:covid19_app/pages/detail/detail_screen.dart';
+import 'package:covid19_app/services/home_service.dart';
+import 'package:covid19_app/utils/format_decimal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get_it/get_it.dart';
 
 import '../../../constants.dart';
 import 'cases_card.dart';
 import 'preventation_card.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
   const Body({
     Key key,
   }) : super(key: key);
+
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  HomeService get service => GetIt.I<HomeService>();
+
+  Today today = Today();
+  APIResponse<Today> _apiResponse;
+  bool _isLoading = false;
+
+  @override
+  void initState() {
+    _fetchNotes();
+    super.initState();
+  }
+
+  _fetchNotes() async {
+    setState(() {
+      _isLoading = true;
+    });
+
+    _apiResponse = await service.getTodayData();
+    today = _apiResponse.data;
+
+    setState(() {
+      _isLoading = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,37 +67,52 @@ class Body extends StatelessWidget {
               spacing: 20,
               children: [
                 CaeseCard(
-                  title: "Confirmed Cases",
+                  title: "New Confirmed",
                   iconColor: Color(0xFFFF8C00),
-                  effectedNum: 1062,
+                  effectedNum: formatDecimal(today.newConfirmed),
                   press: () {},
                 ),
                 CaeseCard(
-                  title: "Total Deaths",
-                  iconColor: Color(0xFFFF2D55),
-                  effectedNum: 75,
+                  title: "Confirmed",
+                  iconColor: Color(0xFFFF8C00),
+                  effectedNum: formatDecimal(today.confirmed),
                   press: () {},
                 ),
                 CaeseCard(
-                  title: "Total Recovered",
+                  title: "New Recovered",
                   iconColor: Color(0xFF50E3C2),
-                  effectedNum: 689,
+                  effectedNum: formatDecimal(today.newRecovered),
                   press: () {},
                 ),
                 CaeseCard(
-                  title: "New Cases",
+                  title: "Recovered",
+                  iconColor: Color(0xFF50E3C2),
+                  effectedNum: formatDecimal(today.recovered),
+                  press: () {},
+                ),
+                CaeseCard(
+                  title: "New Hospitalized",
                   iconColor: Color(0xFF5856D6),
-                  effectedNum: 75,
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return DetailScreen();
-                        },
-                      ),
-                    );
-                  },
+                  effectedNum: formatDecimal(today.newHospitalized),
+                  press: () {},
+                ),
+                CaeseCard(
+                  title: "Hospitalized",
+                  iconColor: Color(0xFF5856D6),
+                  effectedNum: formatDecimal(today.hospitalized),
+                  press: () {},
+                ),
+                CaeseCard(
+                  title: "New Deaths",
+                  iconColor: Color(0xFFFF2D55),
+                  effectedNum: formatDecimal(today.newDeaths),
+                  press: () {},
+                ),
+                CaeseCard(
+                  title: "Deaths",
+                  iconColor: Color(0xFFFF2D55),
+                  effectedNum: formatDecimal(today.deaths),
+                  press: () {},
                 ),
               ],
             ),
