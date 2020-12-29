@@ -1,4 +1,5 @@
 import 'package:covid19_app/pages/home/home_screen.dart';
+import 'package:covid19_app/routes.dart';
 import 'package:covid19_app/services/home_service.dart';
 import 'package:covid19_app/theme.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       title: 'Covid 19',
       theme: theme(),
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      initialRoute: HomeScreen.routeName,
+      routes: routes,
     );
   }
 }

@@ -6,6 +6,7 @@ import '../../constants.dart';
 import 'components/body.dart';
 
 class DetailScreen extends StatelessWidget {
+  static String routeName = '/detail';
   const DetailScreen({Key key}) : super(key: key);
 
   @override

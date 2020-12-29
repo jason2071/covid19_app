@@ -1,7 +1,9 @@
 import 'package:covid19_app/constants.dart';
+import 'package:covid19_app/models/pass_arguments.dart';
 import 'package:covid19_app/pages/detail/components/info_percentage.dart';
 import 'package:covid19_app/pages/detail/components/weekly_chart.dart';
 import 'package:covid19_app/size_config.dart';
+import 'package:covid19_app/utils/format_decimal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'dart:io' show Platform;
@@ -11,6 +13,10 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int total = passArguments.total;
+    int newCases = passArguments.newCases;
+    String percentTotal = ((newCases * 100) / total).toStringAsFixed(2);
+
     return SafeArea(
       child: Container(
         color: kPrimaryColor.withOpacity(0.03),
@@ -49,14 +55,14 @@ class Body extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         Text(
-                          "547 ",
+                          "${formatDecimal(passArguments.newCases)} ",
                           style: Theme.of(context)
                               .textTheme
                               .headline2
                               .copyWith(color: kPrimaryColor, height: 1.2),
                         ),
                         Text(
-                          "5.9% ",
+                          "$percentTotal% ",
                           style: TextStyle(color: kPrimaryColor),
                         ),
                         SvgPicture.asset("assets/icons/increase.svg")

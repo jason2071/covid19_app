@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'components/body.dart';
 
 class HomeScreen extends StatelessWidget {
+  static String routeName = '/home';
   const HomeScreen({Key key}) : super(key: key);
 
   @override
